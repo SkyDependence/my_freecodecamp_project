@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./技术文档.css">
+</head>
+
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>HTML</header>
+            <a href="#Start_learning_HTML" class="nav-link none-border-bottom">Start learning HtML</a>
+            <a href="#Which_is_HTML" class="nav-link none-border-bottom">Which is HTML</a>
+            <a href="#Analyze_a_HTML_element" class="nav-link none-border-bottom">Analyze a HTML element</a>
+            <a href="#Nested_elements" class="nav-link none-border-bottom">Nested elements</a>
+            <a href="#Block_level_elements_and_inline_elements" class="nav-link none-border-bottom">Block level elements and inline elements</a>
+            <a href="#Reference" class="nav-link">Reference</a>
+        </nav>
+        <section id="Start_learning_HTML" class="main-section">
+            <header>Start learning HTML</header>
+            <p>本文将从 HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在 HTML 文档中所处的位置。本文还会讲解 HTML元素和页面的组织方式，以及其他一些重要的基本语言特性。学习的过程中，我们也会使用 HTML 做一些好玩的事情。</p>
+        </section>
+        <section id="Which_is_HTML" class="main-section">
+            <header>Which is HTML</header>
+            <p>HTML（HyperText Markup Language，超文本标记语言）是一种用来告知浏览器如何组织页面的标记语言。HTML 可复杂、可简单，一切取决于 web 开发者。HTML由一系列的元素组成，这些元素可以用来包围或标记不同部分的内容，使其以某种方式呈现或者工作。两端的标签可以使内容变成超链接，以连接到另一个页面；使字体表现为斜体等。例如，考虑如下内容：</p>
+            <code>My cat is very grumpy</code>
+            <p>如果我们想要将这行文字单独呈现，可以将这行文字封装成一个段落（Paragraph）&lt;p&gt;元素：</p>
+            <code>&lt;p&gt;My cat is very grumpy&lt;p&gt;</code>
+        </section>
+        <section id="Analyze_a_HTML_element" class="main-section">
+            <header>Analyze a HTML element</header>
+            <p>让我们进一步探讨我们的前述的段落元素：</p>
+            <img alt="HTML" src="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png">
+            <p>这个元素的主要部分有：</p>
+            <ul>
+                <li><strong>开始标签</strong>（Opening tag）：包含元素的名称（本例为 p），被左、右角括号所包围。开头标签标志着元素开始或开始生效的地方。在这个示例中，它在段落文本的开始之前。
+                </li>
+                <li><strong>内容</strong>（Content）：元素的内容，本例中就是段落的文本。</li>
+                <li><strong>结束标签</strong>（Closing
+                    tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这标志着该元素的结束。没有包含关闭标签是一个常见的初学者错误，它可能会产生奇特的结果。</li>
+            </ul>
+            <p>整个元素即指开始标签、内容、结束标签三部分组成的整体。</p>
+        </section>
+        <section id="Nested_elements" class="main-section">
+            <header>Nested elements</header>
+            <p>你也可以把元素放到其他元素之中——这被称作嵌套。如果我们想要表明我们的小猫脾气很暴躁，可以将 very 一词嵌套在 &lt;strong&gt; 元素中，意味着这个单词被着重强调：</p>
+            <code>&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code>
+            <p>你需要确保元素被正确的嵌套：在上面的例子中我们先打开<span>p</span>元素，然后才打开<span>strong</span>元素，因此必须先将<span>strong</span>元素关闭，然后再去关闭 <span>p</span>元素。下面的例子是错误的</p>
+            <code>&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
+            <p><strong>所有的元素都需要正确的打开和关闭，这样才能按你所想的方式展现。</strong>由于上述示例中的那种重叠，浏览器不得不猜测你的意图。这种猜测可能会导致意想不到的结果。</p>
+        </section>
+        <section id="Block_level_elements_and_inline_elements" class="main-section">
+            <header>Block level elements and inline elements</header>
+            <p>在 HTML 中有两种你需要知道的重要元素类别，块级元素和内联元素。</p>
+            <ul>
+                <li>块级元素在页面中以块的形式展现。一个块级元素出现在它前面的内容之后的新行上。任何跟在块级元素后面的内容也会出现在新的行上。块级元素通常是页面上的结构元素。例如，一个块级元素可能代表标题、段落、列表、导航菜单或页脚。一个块级元素不会嵌套在一个内联元素里面，但它可能嵌套在另一个块级元素里面。
+                </li>
+                <li>内联元素通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或者一组内容。内联元素不会导致文本换行。它通常与文本一起使用，例如&lt;a&gt;元素创建一个超链接，&lt;em&gt;和&lt;strong&gt;等元素创建强调。
+                </li>
+                <p>考虑如下示例：</p>
+                <code>&lt;em&gt;第一&lt;/em&gt;&lt;em&gt;第二&lt;/em&gt;&lt;em&gt;第三&lt;/em&gt;<br><br>&lt;p&gt;第四&lt;/p&gt;<br>&lt;p&gt;第五&lt;/p&gt;<br>&lt;p&gt;第六&lt;/p&gt;</code>
+            </ul>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <ul>
+                <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
