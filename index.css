@@ -1,0 +1,195 @@
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'smiley-sans';
+    src: url(./smiley-sans-v1.1.1/SmileySans-Oblique.ttf.woff2);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navigation {
+    height: 70px;
+    width: 100vw;
+    background-color: #66ccff;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
+.navbar a {
+    color: white;
+    font-size: 25px;
+    margin-right: 20px;
+    font-family: Consolas, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+}
+
+.welcome-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome {
+    display: block;
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    font-family: smiley-sans, sans-serif;
+}
+
+.introduction {
+    display: block;
+    font-size: 2rem;
+    font-weight: 50;
+    margin-top: 5px;
+    font-style: italic;
+    font-family: smiley-sans, sans-serif;
+    letter-spacing: 2px;
+}
+
+.project-title {
+    margin: 0;
+    background-color: #0983c1;
+    width: 100%;
+    padding: 0;
+}
+
+.project-introduction {
+    letter-spacing: 5px;
+    font-size: 3rem;
+    font-family: smiley-sans, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+    padding-top: 1rem;
+}
+
+hr {
+    width: 50%;
+    margin-top: 0;
+    height: 5px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.project-up, .project-down {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.project {
+    display: grid;
+    grid-template-rows: 9fr 1fr;
+    overflow: hidden;
+    height: 400px;
+    width: 90%;
+    border: 1px solid #66ccff;
+    border-radius: 2%;
+    margin: 2rem;
+    background-color: white;
+    box-sizing: 4px 4px 6px rgba(50, 127, 199, 0.969); 
+    background-color: #93dbff;
+}
+
+.project p {
+    text-align: center;
+    color: black;
+    font-family: Consolas, sans-serif;
+    letter-spacing: 2px;
+}
+
+.png img {
+    width: 100%;
+}
+
+.png {
+    overflow: hidden;
+}
+
+.contract {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+}
+
+.some_word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.together {
+    font-size: 4rem;
+    font-family: smiley-sans, sans-serif ; 
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.World {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #66ccff;
+}
+
+@media only screen and (max-width: 550px) {
+    .project-up, .project-down {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }   
+}
